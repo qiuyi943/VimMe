@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid4.4_3.10_volte_dev/vendor/sprd/proprietories-source/video'
+let g:netrw_dirhist_2='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid4.4_3.10/vendor/sprd/proprietories-source/video/video_2_0/os/linux'
+let g:netrw_dirhist_3='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid4.4_3.10/vendor/sprd/proprietories-source/video/video_2_0/os/linux/vce'
+let g:netrw_dirhist_4='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid5.1_trunk/device/sprd/scx35l'
+let g:netrw_dirhist_5='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid5.1_trunk/device/sprd'
+let g:netrw_dirhist_6='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid4.4_3.10/vendor/sprd/proprietories-source/video'
+let g:netrw_dirhist_7='/home/likewise-open/SPREADTRUM/yi.qiu/work/sprd_sc/sprdroid5.1_trunk/vendor/sprd/proprietories-source/video/modemDriver/vpad/main'

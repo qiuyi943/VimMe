@@ -1,0 +1,14 @@
+常用命令:
+wm打开ide界面，再次wm就关闭了
+ctrl+w在各个窗口切换
+ctrl+h切换到左边的窗口
+ctrl+j切换到下面的窗口
+ctrl+l切换到右边的窗口
+ctrl+j切换到上面的窗口
+ctrl+m+c/f/t/s分别对应cscope的各种快捷件
+当我们需要阅读代码时，必须先生成tags文件和cscope.out文件，这个可以通过我
+些的脚本自动生成
+比如你要阅读source文件夹下的代码
+就使用cs source
+当Source下有文件更新了，你可以使用
+cs source -u来更新

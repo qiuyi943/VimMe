@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/apuser/sprdroid4.4_3.10/kernel/.git'
+let g:netrw_dirhist_2='/home/apuser/.android'
+let g:netrw_dirhist_3='/home/apuser/ubuntu/viminstall/.vim'
