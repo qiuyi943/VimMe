@@ -994,5 +994,5 @@ set completeopt=menuone,menu,longest
 map <C-f> :cs find
 map <C-b> :%s/\s\+$//g<cr>
 map <C-a> :%s/SRC/DST/g
-
+map <C-z> /\C<C-R>=expand("<cword>")<CR><CR>
 
