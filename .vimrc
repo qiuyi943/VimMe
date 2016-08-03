@@ -529,8 +529,8 @@ vmap <silent> <leader>zo zO
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set expandtab
-"set shiftwidth=4
+set expandtab
+set shiftwidth=4
 
 map <leader>t2 :set shiftwidth=2<cr>
 map <leader>t4 :set shiftwidth=4<cr>
@@ -991,8 +991,9 @@ set completeopt=menuone,menu,longest
 
 
 "short cut"
-map <C-f> :cs find
+map <C-f> :cs find 
 map <C-b> :%s/\s\+$//g<cr>
 map <C-a> :%s/SRC/DST/g
-map <C-z> /\C<C-R>=expand("<cword>")<CR><CR>
+map <C-n> /\C<C-R>=expand("<cword>")<CR><CR>
 
+au BufWritePost *.c,*.cpp,*.h silent! !ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .&
