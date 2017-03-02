@@ -985,13 +985,16 @@ let OmniCpp_MayCompleteDot = 1   " .
 let OmniCpp_MayCompleteArrow = 1 " ->
 let OmniCpp_MayCompleteScope = 1 " ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+
 " close the completion window automaticlly
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest
 
+"enable mouse operation"
+set mouse=a
 
 "short cut"
-map <C-f> :cs find 
+map <C-f> :cs find
 map <C-b> :%s/\s\+$//g<cr>
 map <C-a> :%s/SRC/DST/g
 map <C-n> /\C<C-R>=expand("<cword>")<CR><CR>
