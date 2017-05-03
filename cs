@@ -30,6 +30,7 @@ rm -rf cscope.files
 #ctags -L ./cscope.files
 #ctags -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f cpp .
 ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+ctags -I __THROW --file-scope=yes --langmap=c:+.h --languages=c,c++ --links=yes --c-kinds=+p --fields=+S -R -f ~/.vim/systags /usr/include /usr/local/include
 #cscope -Rkb
 cscope -Rbq
 fi

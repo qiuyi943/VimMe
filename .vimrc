@@ -1,3 +1,4 @@
+let $dir="/data/easonqiu/.vim"
 let $dir="/home8/yiqiu/.vim"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This vimrc is based on the vimrc by Amix:
@@ -36,39 +37,40 @@ set history=400
 
 " Chinese
 " multi-encoding setting
-if has("multi_byte")
-  "set bomb
-  set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,sjis,euc-kr,ucs-2le,latin1
-  " CJK environment detection and corresponding setting
-  if v:lang =~ "^zh_CN"
-    " Use cp936 to support GBK, euc-cn == gb2312
-    set encoding=chinese
-    set termencoding=chinese
-    set fileencoding=chinese
-  elseif v:lang =~ "^zh_TW"
-    " cp950, big5 or euc-tw
-    " Are they equal to each other?
-    set encoding=taiwan
-    set termencoding=taiwan
-    set fileencoding=taiwan
-  "elseif v:lang =~ "^ko"
+"if has("multi_byte")
+"set bomb
+"set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,sjis,euc-kr,ucs-2le,latin1
+" CJK environment detection and corresponding setting
+if v:lang =~ "^zh_CN"
+  " Use cp936 to support GBK, euc-cn == gb2312
+  set encoding=chinese
+  set termencoding=chinese
+  set fileencoding=chinese
+elseif v:lang =~ "^zh_TW"
+  " cp950, big5 or euc-tw
+  " Are they equal to each other?
+  set encoding=taiwan
+  set termencoding=taiwan
+  set fileencoding=taiwan
+elseif v:lang =~ "^ko"
   "  " Copied from someone's dotfile, untested
-  "  set encoding=euc-kr
-  "  set termencoding=euc-kr
-  "  set fileencoding=euc-kr
-  "elseif v:lang =~ "^ja_JP"
-  "  " Copied from someone's dotfile, untested
-  "  set encoding=euc-jp
-  "  set termencoding=euc-jp
-  "  set fileencoding=euc-jp
-  endif
-  " Detect UTF-8 locale, and replace CJK setting if needed
-  if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-    set encoding=utf-8
-    set termencoding=utf-8
-    set fileencoding=utf-8
-  endif
+  set encoding=euc-kr
+  set termencoding=euc-kr
+  set fileencoding=euc-kr
+elseif v:lang =~ "^ja_JP"
+" Copied from someone's dotfile, untested
+set encoding=euc-jp
+set termencoding=euc-jp
+set fileencoding=euc-jp
 endif
+" Detect UTF-8 locale, and replace CJK setting if needed
+if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+endif
+
 "if MySys() == "windows"
    "set encoding=utf-8
    "set langmenu=zh_CN.UTF-8
@@ -600,7 +602,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
   if MySys() == "linux"
-    set csprg=/usr/bin/cscope
+    set csprg=~/bin/cscope
   else
     set csprg=cscope
   endif
@@ -991,7 +993,9 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest
 
 "enable mouse operation"
-set mouse=a
+"set mouse=a
+
+set tags+=~/.vim/systags
 
 "short cut"
 map <C-f> :cs find
