@@ -1,7 +1,7 @@
 #!/bin/sh
 echo 'let $dir=''"'$HOME'/.vim"'>tmp
-cat .vimrc>>tmp
- cp -f cs ctags cscope ~/bin
+cat .vimrc>>tmp 
+cp -f cs ctags cscope ~/bin
 mv ~/.vim ~/.vimb 2>/dev/null
 mkdir -p ~/.vim
 chmod a+rw ~/.vim
